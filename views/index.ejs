@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title><%= Skills %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <h1><%= My Skills %></h1>
     <p>Welcome to <%= title %></p>
+    <ul>
+      <% skills.forEach(function(s) { %>
+      <li><a href="/skills/<%=s.id %>"><%= s.name %></a></li>
+      <% }); %>
+    </ul>
   </body>
 </html>
