@@ -1,11 +1,19 @@
-const express = require('express')
-const router = express.Router()
+var express = require('express');
+var router = express.Router();
 
-const {index, show} = require('../controllers/skills')
+const skillsCtrl = require('../controllers/skills')
 
-router.get('/', index)
+router.get('/', skillsCtrl.index)
 
-router.get('/:id', show)
+router.get('/new', skillsCtrl.new)
+
+router.get('/:id', skillsCtrl.show)
+
+router.post('/', skillsCtrl.create)
+
+router.delete('/:id', skillsCtrl.delete)
+
+router.put('/:id', skillsCtrl.update)
 
 module.exports = router
 

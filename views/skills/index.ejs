@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Skills</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>My Skills</h1>
+      <a href="/skills/new">Add Skill</a>
+      <ul>
+        <% skills.forEach(function(s) { %>
+        <li>
+          <a href="/skills/<%=s.id %>"><%= s.name %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </main>
+  </body>
+</html>
